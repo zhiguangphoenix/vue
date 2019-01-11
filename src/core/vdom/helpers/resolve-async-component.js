@@ -79,6 +79,8 @@ export function resolveAsyncComponent (
       // (async resolves are shimmed as synchronous during SSR)
       if (!sync) {
         forceRender(true)
+      } else {
+        contexts.length = 0
       }
     })
 
